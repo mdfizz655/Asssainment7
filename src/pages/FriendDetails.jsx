@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 import { useContext, useState, useEffect } from 'react';
 
-import { TimelineContext } from '../App';
+   import { TimelineContext } from '../App';
 
 
 
@@ -170,7 +170,7 @@ import toast from 'react-hot-toast';
 
         <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
 
-          <h3 className="font-bold text-gray-800 mb-6 uppercase text-xs tracking-widest">Quick Check-In</h3>
+             <h3 className="font-bold text-gray-800 mb-6 uppercase text-xs tracking-widest">Quick Check-In</h3>
 
           <div className="flex gap-4">
 
@@ -180,17 +180,17 @@ import toast from 'react-hot-toast';
               <div className="bg-gray-100 p-3 rounded-full group-hover:bg-white transition-colors"><Phone size={20}/></div>
 
 
-              <span className="font-bold text-sm">Call</span>
+                   <span className="font-bold text-sm">Call</span>
 
 
-            </button>
+             </button>
 
 
             <button onClick={() => handleAction('Text')} className="flex-1 flex flex-col items-center gap-2 p-6 border rounded-2xl hover:bg-green-50 transition-colors group">
 
 
-               <div className="bg-gray-100 p-3 rounded-full group-hover:bg-white transition-colors"><MessageSquare size={20}/></div>
-
+                   <div className="bg-gray-100 p-3 rounded-full group-hover:bg-white transition-colors"><MessageSquare size={20}/></div>
+         
 
                 <span className="font-bold text-sm">Text</span>
 
