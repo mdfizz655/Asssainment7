@@ -36,18 +36,18 @@ import toast from 'react-hot-toast';
 
 
 
-  const handleAction = (type) => {
-    const newEntry = {
+   const handleAction = (type) => {
+        const newEntry = {
       id: Date.now(),
       friendName: friend.name,
-      type: type,
+       type: type,
       date: new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
     };
 
 
 
 
-    addInteraction(newEntry);
+      addInteraction(newEntry);
 
 
     toast.success(`${type} recorded with ${friend.name}!`);
@@ -66,14 +66,14 @@ import toast from 'react-hot-toast';
   return (
 
 
-      <div className="max-w-5xl mx-auto p-6 grid grid-cols-1 md:grid-cols-12 gap-8 mt-10">
+          <div className="max-w-5xl mx-auto p-6 grid grid-cols-1 md:grid-cols-12 gap-8 mt-10">
 
 
       
 
       <div className="md:col-span-4 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm h-fit">
 
-          <img src={friend.picture} className="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-lg" />
+            <img src={friend.picture} className="w-24 h-24 rounded-full mx-auto border-4 border-white shadow-lg" />
 
           
           <h2 className="text-center text-2xl font-bold mt-4">{friend.name}</h2>
@@ -86,20 +86,22 @@ import toast from 'react-hot-toast';
 
         </div>
 
-        <div className="flex justify-center gap-2 mt-2">
+             <div className="flex justify-center gap-2 mt-2">
 
             {friend.tags.map(t => <span key={t} className="text-[10px] bg-gray-100 px-2 py-1 rounded font-bold">{t}</span>)}
         </div>
 
          <p className="mt-6 text-gray-500 text-sm text-center italic">"{friend.bio}"</p> 
 
-          <p className="text-center text-gray-400 text-xs mt-2 underline">{friend.email}</p>
+                <p className="text-center text-gray-400 text-xs mt-2 underline">{friend.email}</p>
         
         <div className="mt-8 space-y-3">
           
           <button className="w-full flex items-center justify-center gap-2 border py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-50"><Clock size={16}/> Snooze 2 Weeks</button>
           
-          <button className="w-full flex items-center justify-center gap-2 border py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-50"><Archive size={16}/> Archive</button>
+
+
+                    <button className="w-full flex items-center justify-center gap-2 border py-2.5 rounded-lg text-sm font-semibold hover:bg-gray-50"><Archive size={16}/> Archive</button>
           
           <button className="w-full flex items-center justify-center gap-2 border py-2.5 rounded-lg text-sm font-semibold text-red-500 hover:bg-red-50 border-red-100"><Trash2 size={16}/> Delete</button>
         
@@ -117,6 +119,7 @@ import toast from 'react-hot-toast';
         <div className="grid grid-cols-3 gap-4">
           
           
+
            <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
             
             <p className="text-3xl font-black text-gray-800">{friend.days_since_contact}</p>
@@ -129,7 +132,7 @@ import toast from 'react-hot-toast';
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center">
              
               
-            <p className="text-3xl font-black text-gray-800">{friend.goal}</p> 
+              <p className="text-3xl font-black text-gray-800">{friend.goal}</p> 
 
 
             <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">Goal (Days)</p> 
@@ -139,7 +142,7 @@ import toast from 'react-hot-toast';
             
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm text-center"> 
 
-            <p className="text-lg font-black text-gray-800 mt-2">{friend.next_due_date}</p> 
+              <p className="text-lg font-black text-gray-800 mt-2">{friend.next_due_date}</p> 
 
 
             <p className="text-[10px] text-gray-400 font-bold uppercase mt-1">Next Due</p> 
@@ -158,7 +161,7 @@ import toast from 'react-hot-toast';
 
 
             <div>
-                <p className="text-xs text-gray-400 font-bold uppercase">Relationship Goal</p>
+                   <p className="text-xs text-gray-400 font-bold uppercase">Relationship Goal</p>
                 <p className="font-semibold text-gray-700">Connect every <span className="font-bold text-black">{friend.goal} days</span></p>
             </div>
 
@@ -170,11 +173,11 @@ import toast from 'react-hot-toast';
 
         <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
 
-             <h3 className="font-bold text-gray-800 mb-6 uppercase text-xs tracking-widest">Quick Check-In</h3>
+                <h3 className="font-bold text-gray-800 mb-6 uppercase text-xs tracking-widest">Quick Check-In</h3>
 
           <div className="flex gap-4">
 
-            <button onClick={() => handleAction('Call')} className="flex-1 flex flex-col items-center gap-2 p-6 border rounded-2xl hover:bg-green-50 transition-colors group">
+               <button onClick={() => handleAction('Call')} className="flex-1 flex flex-col items-center gap-2 p-6 border rounded-2xl hover:bg-green-50 transition-colors group">
 
 
               <div className="bg-gray-100 p-3 rounded-full group-hover:bg-white transition-colors"><Phone size={20}/></div>
@@ -201,7 +204,7 @@ import toast from 'react-hot-toast';
             <button onClick={() => handleAction('Video')} className="flex-1 flex flex-col items-center gap-2 p-6 border rounded-2xl hover:bg-green-50 transition-colors group">
 
 
-              <div className="bg-gray-100 p-3 rounded-full group-hover:bg-white transition-colors"><Video size={20}/></div>
+                  <div className="bg-gray-100 p-3 rounded-full group-hover:bg-white transition-colors"><Video size={20}/></div>
 
 
               <span className="font-bold text-sm">Video</span>
@@ -219,4 +222,7 @@ import toast from 'react-hot-toast';
 
   );
 };
+
+
+
 export default FriendDetails;
