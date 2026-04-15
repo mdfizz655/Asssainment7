@@ -1,4 +1,4 @@
-# 🌿 KeenKeeper - Nurture Your Friendships
+# KeenKeeper - Nurture Your Friendships
 
 **KeenKeeper** is a simple yet powerful personal relationship manager designed to help you stay connected with the people who matter most. In our busy daily lives, it's easy to lose track of time and forget to check in on friends. This app acts as your personal "shelf" of connections, reminding you when it's time to reach out and keep those bonds strong.
 
