@@ -1,8 +1,16 @@
-import { useContext } from 'react';
+    import { useContext } from 'react';
 
-import { TimelineContext } from '../App';
+
+
+ import { TimelineContext } from '../App';
+
+
 
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+
+
+
+
 
 const Stats = () => {
   const { timeline } = useContext(TimelineContext);
@@ -11,8 +19,11 @@ const Stats = () => {
 
   const data = [
     { name: 'Call', value: timeline.filter(t => t.type === 'Call').length },
+
     { name: 'Text', value: timeline.filter(t => t.type === 'Text').length },
+
     { name: 'Video', value: timeline.filter(t => t.type === 'Video').length },
+
   ];
 
   
@@ -59,10 +70,13 @@ const Stats = () => {
               />
 
 
+
               <Legend verticalAlign="bottom" height={36}/>
             </PieChart>
           </ResponsiveContainer>
         ) : (
+         
+         
           <div className="text-gray-400 font-medium">Log some interactions to see analytics!</div>
         )}
 
